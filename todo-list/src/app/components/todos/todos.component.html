@@ -1,0 +1,15 @@
+<br>
+<h4>Hi Rayyan. </h4>
+<h5>Here are your todos</h5>
+<br>
+<!-- First addTodo is the emitter -->
+<app-add-todo
+    (addTodo)=(addTodo($event))
+></app-add-todo>
+<app-todo-block 
+    *ngFor="let todoStuff of todos" 
+    [todoPassIn]="todoStuff"
+    (todoPassOut)="deleteTodo($event)"
+>
+    
+</app-todo-block>
